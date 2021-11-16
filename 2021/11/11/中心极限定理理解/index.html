@@ -503,13 +503,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解"><a href="#最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解" class="headerlink" title="最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解"></a>最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解</h3><h4 id="how-to-understand-its-theory-and-its-practice"><a href="#how-to-understand-its-theory-and-its-practice" class="headerlink" title="how to understand its theory and its practice?"></a>how to understand its theory and its practice?<br></h4><p>try to think: we give a group with any distribution(bell or skewed shape), then we randomly choose N samplings evey time from this group, then execute this random choosing in M times, then we calculated mean of samplings every time, so we get M’s means, if we draft such distribution of total means, then we will get a normal distribution.<br></p>
-<p>Some points we shall care about:<br>1.Mean<br>the point is we shall calculate it and see its distribution.<br></p>
-<p>2.group distribution<br>we do not care group distribution because it’s nothing to do with current<br></p>
-<p>3.large sampling<br>every time, we choose sampling, the amount shall be more than 30, otherwise, central limit will not be very obivious.<br></p>
+                <h3 id="最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解"><a href="#最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解" class="headerlink" title="最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解"></a>最近在复习统计学，看到中心极限定理，这边就想到用python来简单的实现下，顺便帮助理解</h3><h4 id="how-to-understand-its-theory-and-its-practice"><a href="#how-to-understand-its-theory-and-its-practice" class="headerlink" title="how to understand its theory and its practice?"></a>how to understand its theory and its practice?<br></h4><p>try to think: we give a group with any distribution(bell or skewed shape), then we randomly choose N samplings evey time from this group, then execute this random choosing in M times, then we calculated mean of samplings every time, so we get M's means, if we draft such distribution of total means, then we will get a normal distribution.<br></p>
+
+<p>Some points we shall care about:</p>
+<ul>
+<li><p>1.Mean<br>the point is we shall calculate it and see its distribution.<br></p>
+</li>
+<li><p>2.group distribution<br>we do not care group distribution because it’s nothing to do with current<br></p>
+</li>
+<li><p>3.large sampling<br>every time, we choose sampling, the amount shall be more than 30, otherwise, central limit will not be very obivious.<br></p>
+</li>
+</ul>
 <p>Okay, next we use python to display this theory:</p>
-<h4 id="assume-we-observe-throwing-dice-six-dimensions"><a href="#assume-we-observe-throwing-dice-six-dimensions" class="headerlink" title="assume we observe throwing dice(six dimensions)"></a>assume we observe throwing dice(six dimensions)</h4><p>import numpy as np<br>randam_data = np.random.randint(1,7,10000) #throwing 10000 times!!<br>print(randam_data.mean()) #=&gt; it’s easy to understand, because1-6, mean will be around 3.5<br>print(randam_data.std())<br>3.5395<br>1.6999528669936705</p>
-<p>import pandas as pd<br>data = pd.DataFrame(randam_data)<br>data.hist() #=&gt; 1-6 distributes in a very equal state, that’s good!</p>
+<h4 id="assume-we-observe-throwing-dice-six-dimensions"><a href="#assume-we-observe-throwing-dice-six-dimensions" class="headerlink" title="assume we observe throwing dice(six dimensions)"></a>assume we observe throwing dice(six dimensions)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">randam_data &#x3D; np.random.randint(1,7,10000) #throwing 10000 times!!</span><br><span class="line">print(randam_data.mean()) #&#x3D;&gt; it&#39;s easy to understand,because1-6, mean will be around 3.5</span><br><span class="line">print(randam_data.std()) </span><br><span class="line">3.5395</span><br><span class="line">1.6999528669936705</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>so we try to plot its distribution:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">data &#x3D; pd.DataFrame(randam_data)</span><br><span class="line">data.hist() #&#x3D;&gt; 1-6 distributes in a very equal state, that&#39;s good!</span><br></pre></td></tr></table></figure>
+
 <h4 id="let’s-produce-one-sample-which-contains-10-numbers"><a href="#let’s-produce-one-sample-which-contains-10-numbers" class="headerlink" title="let’s produce one sample which contains 10 numbers"></a>let’s produce one sample which contains 10 numbers</h4><p>sample1 = [randam_data[int(np.random.random() * len(randam_data))] for i in range(0, 10)]<br>print(np.array(sample1).mean()) # so we can see single sampling is a little different<br>print(np.array(sample1).std())<br>2.8<br>1.661324772583615</p>
 <h4 id="let’s-do-big-thing"><a href="#let’s-do-big-thing" class="headerlink" title="let’s do big thing!"></a>let’s do big thing!</h4><p>samples = []<br>samples_mean = []<br>samples_std = []</p>
 <p>for i in range(0, 1000):<br>    sample = []<br>    for j in range(0, 50):<br>        sample.append(randam_data[int(np.random.random() * len(randam_data))])<br>    sample_np = np.array(sample)<br>    samples_mean.append(sample_np.mean())<br>    samples_std.append(sample_np.std())<br>    samples.append(sample_np)</p>
