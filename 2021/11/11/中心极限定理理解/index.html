@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="“Centre Limit Theorem_中心极限定理”, iforyuan">
+    <meta name="keywords" content="Centre Limit Theorem_中心极限定理, iforyuan">
     <meta name="description" content="I am here for you">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>“Centre Limit Theorem_中心极限定理” | iforyuan</title>
+    <title>Centre Limit Theorem_中心极限定理 | iforyuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -345,12 +345,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">“Centre Limit Theorem_中心极限定理”</h1>
+                    <h1 class="description center-align post-title">Centre Limit Theorem_中心极限定理</h1>
                 </div>
             </div>
         </div>
@@ -520,12 +520,15 @@
 <p>so we try to plot its distribution:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">data &#x3D; pd.DataFrame(randam_data)</span><br><span class="line">data.hist() #&#x3D;&gt; 1-6 distributes in a very equal state, that&#39;s good!</span><br></pre></td></tr></table></figure>
 
-<h4 id="let’s-produce-one-sample-which-contains-10-numbers"><a href="#let’s-produce-one-sample-which-contains-10-numbers" class="headerlink" title="let’s produce one sample which contains 10 numbers"></a>let’s produce one sample which contains 10 numbers</h4><p>sample1 = [randam_data[int(np.random.random() * len(randam_data))] for i in range(0, 10)]<br>print(np.array(sample1).mean()) # so we can see single sampling is a little different<br>print(np.array(sample1).std())<br>2.8<br>1.661324772583615</p>
-<h4 id="let’s-do-big-thing"><a href="#let’s-do-big-thing" class="headerlink" title="let’s do big thing!"></a>let’s do big thing!</h4><p>samples = []<br>samples_mean = []<br>samples_std = []</p>
-<p>for i in range(0, 1000):<br>    sample = []<br>    for j in range(0, 50):<br>        sample.append(randam_data[int(np.random.random() * len(randam_data))])<br>    sample_np = np.array(sample)<br>    samples_mean.append(sample_np.mean())<br>    samples_std.append(sample_np.std())<br>    samples.append(sample_np)</p>
-<p>samples_mean_np = np.array(samples_mean)<br>samples_std_np = np.array(samples_std)<br>print (samples_mean_np) # then we have 1000 means of samplings</p>
-<p>samples_mean_np = pd. DataFrame(samples_mean_np)<br>samples_mean_np.hist() # so you can see a standard normal distribution we finally get! what a central limit theorem</p>
+<h4 id="let’s-produce-one-sample-which-contains-10-numbers"><a href="#let’s-produce-one-sample-which-contains-10-numbers" class="headerlink" title="let’s produce one sample which contains 10 numbers"></a>let’s produce one sample which contains 10 numbers</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sample1 &#x3D; [randam_data[int(np.random.random() * len(randam_data))] for i in range(0, 10)]</span><br><span class="line">print(np.array(sample1).mean()) # so we can see single sampling is a little different</span><br><span class="line">print(np.array(sample1).std())</span><br><span class="line">2.8</span><br><span class="line">1.661324772583615</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="let’s-do-big-thing"><a href="#let’s-do-big-thing" class="headerlink" title="let’s do big thing!"></a>let’s do big thing!</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">samples &#x3D; []</span><br><span class="line">samples_mean &#x3D; []</span><br><span class="line">samples_std &#x3D; []</span><br><span class="line"></span><br><span class="line">for i in range(0, 1000):</span><br><span class="line">    sample &#x3D; []</span><br><span class="line">    for j in range(0, 50):</span><br><span class="line">        sample.append(randam_data[int(np.random.random() * len(randam_data))])</span><br><span class="line">    sample_np &#x3D; np.array(sample)</span><br><span class="line">    samples_mean.append(sample_np.mean())</span><br><span class="line">    samples_std.append(sample_np.std())</span><br><span class="line">    samples.append(sample_np)</span><br><span class="line"></span><br><span class="line">samples_mean_np &#x3D; np.array(samples_mean)</span><br><span class="line">samples_std_np &#x3D; np.array(samples_std)</span><br><span class="line">print (samples_mean_np) # then we have 1000 means of samplings</span><br><span class="line"></span><br><span class="line">samples_mean_np &#x3D; pd. DataFrame(samples_mean_np)</span><br><span class="line">samples_mean_np.hist() # so you can see a standard normal distribution we finally get! what a central limit theorem</span><br></pre></td></tr></table></figure>
+<p><img src="image/clt.png" alt="normal distribution"></p>
 <h4 id="In-practice"><a href="#In-practice" class="headerlink" title="In practice:"></a>In practice:<br></h4><p>Because we cannot know mean and std of one large group dataset or objects(like toys we produced), so CLT gives us a very reasonable and cofindence to estimate one group by samplings from this group dataset..enjoy, this is power of statistics, uhaha..</p>
+
+
+
 <p>by Wang xu in NUS campus</p>
 
                 
@@ -773,9 +776,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="“Centre Limit Theorem_中心极限定理”">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Centre Limit Theorem_中心极限定理">
                         
-                        <span class="card-title">“Centre Limit Theorem_中心极限定理”</span>
+                        <span class="card-title">Centre Limit Theorem_中心极限定理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
