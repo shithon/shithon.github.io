@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="最近心得, iforyuan">
+    <meta name="keywords" content="“Numpy学习笔记简单汇总”, iforyuan">
     <meta name="description" content="I am here for you">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>最近心得 | iforyuan</title>
+    <title>“Numpy学习笔记简单汇总” | iforyuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -350,7 +350,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">最近心得</h1>
+                    <h1 class="description center-align post-title">“Numpy学习笔记简单汇总”</h1>
                 </div>
             </div>
         </div>
@@ -466,14 +466,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%BF%83%E6%83%85/">
-                                <span class="chip bg-color">心情</span>
+                            <a href="/tags/tech/">
+                                <span class="chip bg-color">tech</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/programming/" class="post-category">
+                                programming
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -503,12 +512,43 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="【开头】"><a href="#【开头】" class="headerlink" title="【开头】"></a>【开头】</h3><h2 id="最近心得"><a href="#最近心得" class="headerlink" title="最近心得"></a>最近心得</h2><p>正值航运季摊上一个单子，这里不免得又开始要迭代自己了。作为中间方，永远都是那个如履薄冰的杂技师。这次碰到的买家broker是真的心大，卖方那边是真的随意，but who knows! 永远都是这种动态中在寻找平衡。类似于与不同风格的敌人作战（买卖双方），与不同风格的队友（Broker）互相合作，既要实时跟进动态又要随时调整姿态。</p>
-<p>事发伊始，船舶在市场抛售很久，船东苦于没有买家，苦苦追寻下不料意外获得一个firm之级的买家，先报盘再验船，如此设想，本着一帆风顺，各个点位都在自己的控制范围之内，但是，苦于买家的broker实在没摸清买家那边的底细，根本不清楚自己能把价格掐到什么程度，给出的报盘价格真的是在让我发挥”无米之炊“，随着市场的波动，一夜之间询盘突涨，还有船东方的关系方（uncle）插入谈判，然后就正如战场扩大一般，乱成一团，broker之间就痛苦了：我买家验船了，不能报到盘，费用咋办？反过来又在想：我不验船，到时候船没卖掉，船东又找回来可咋办？还真是矛盾中的人格拉扯。</p>
-<p>权衡卖方有着uncle的关系之下，诚然告知买家放弃验船，退出谈判。我自觉这次谈判中自己没有出现大问题，已然摸清卖方的思想动态，跟进的消息也很及时，可能招架不住的还是意外的来临，但是这份工作永远都是在教我–在不可能中寻找可能。</p>
-<p>没有什么煽情或者动听的哲学要总结，回顾case，经验也便是如此积累，抖抖身上灰尘继续前行。自勉！</p>
-<p>End 2022.3.25</p>
-<p>by Ervin ONG</p>
+                <h1 id="Numpy学习笔记简单汇总"><a href="#Numpy学习笔记简单汇总" class="headerlink" title="Numpy学习笔记简单汇总"></a>Numpy学习笔记简单汇总</h1><p>参考资料（references）:</p>
+<ul>
+<li><p>1.numpy-100 exercises:<a target="_blank" rel="noopener" href="https://github.com/rougier/numpy-100">GitHub - rougier/numpy-100: 100 numpy exercises (with solutions)</a></p>
+</li>
+<li><p>2.官方文档offical documentation</p>
+</li>
+<li><p>3.<a target="_blank" rel="noopener" href="https://hakk.gg/numpy-illustrated-the-visual-guide-to-numpy/">https://hakk.gg/numpy-illustrated-the-visual-guide-to-numpy/</a></p>
+</li>
+</ul>
+<p><strong>基本性质</strong></p>
+<ul>
+<li>.ndim,  .shape, .size, .dtype, .itemsize, .data</li>
+</ul>
+<p><strong>如何创建</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">arr = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], dtype=np.<span class="built_in">float</span>)</span><br><span class="line"></span><br><span class="line">(<span class="number">2</span>)</span><br><span class="line">np.zeros((<span class="number">3</span>,<span class="number">4</span>)) <span class="comment">#二维数组</span></span><br><span class="line">np.ones((<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>),dtype=np.<span class="built_in">int</span>) <span class="comment">#三维数组</span></span><br><span class="line"></span><br><span class="line">还有：zeros_like, ones_like, empty, empty_like</span><br><span class="line"></span><br><span class="line">(<span class="number">3</span>)</span><br><span class="line">np.arange(<span class="number">0</span>,<span class="number">10</span>,<span class="number">2</span>) <span class="comment">#0-10，+2一步</span></span><br><span class="line">np.linspace(<span class="number">0</span>,<span class="number">2</span>,<span class="number">9</span>) <span class="comment">#0-2按照9等分</span></span><br><span class="line"></span><br><span class="line">（<span class="number">4</span>）</span><br><span class="line">np.random.randint(<span class="number">0.10</span>,<span class="number">3</span>)<span class="comment">#uniform0-10</span></span><br><span class="line">np.random.rand(<span class="number">3</span>)<span class="comment">#uniform0-1</span></span><br><span class="line">np.random.randn(<span class="number">3</span>)<span class="comment">#normal miu=1 sigma=0</span></span><br><span class="line">np.random.uniform(<span class="number">1</span>,<span class="number">10</span>,<span class="number">3</span>)<span class="comment">#uniform1-10</span></span><br><span class="line">np.random.normal(<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>)<span class="comment">#normal miu=1 sigma=0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>运算</strong></p>
+<p>主要是关注矩阵运算的点乘 也即dot()，这在机器学习矩阵运算里面必备</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 加减乘除</span></span><br><span class="line"><span class="comment"># np.sqrt(); np.exp(); np.log()</span></span><br><span class="line"><span class="comment"># np.dot(); np.cross()</span></span><br><span class="line"><span class="comment"># np.sin(),np.arcsin()</span></span><br><span class="line"><span class="comment"># np.hypot()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># np.floor()</span></span><br><span class="line"><span class="comment"># np.ceil()</span></span><br><span class="line"><span class="comment"># np.round()</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># .max()</span></span><br><span class="line"><span class="comment"># .min()</span></span><br><span class="line"><span class="comment"># .sum()</span></span><br><span class="line"><span class="comment"># .var()</span></span><br><span class="line"><span class="comment"># .argmax() -&gt; return the index</span></span><br><span class="line"><span class="comment"># .argmin() -&gt;返回的是Index</span></span><br><span class="line"><span class="comment"># .mean()</span></span><br><span class="line"><span class="comment"># .std()</span></span><br><span class="line"><span class="comment"># both std and var ignore Bessel’s correction,</span></span><br><span class="line"><span class="comment"># 如果要修正的话，就要指定自由度，也即在后面加上自由度参数delta degress of freedom</span></span><br><span class="line"></span><br><span class="line">res1, res2, res3, res4 = [], [], [], []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">    a = np.random.randn(<span class="number">100</span>)</span><br><span class="line">    res1.append(a.std())</span><br><span class="line">    res2.append(a.std(ddof=<span class="number">1</span>))</span><br><span class="line">    res3.append(a.std(ddof=<span class="number">1.5</span>))</span><br><span class="line">    res4.append(a.std(ddof=<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.argmin(x) <span class="comment">#最小值的索引</span></span><br><span class="line">np.argmax(x) <span class="comment">#最大值的索引</span></span><br><span class="line">np.random.shuffle() <span class="comment">#打乱数组顺序</span></span><br><span class="line">np.sort(x) <span class="comment">#数组排序</span></span><br><span class="line">np.argsort(x) <span class="comment">#按大小排序后对应的原数组的索引</span></span><br><span class="line">np.partition(l,<span class="number">3</span>)<span class="comment">#把小于3 的放在前面，大于3的放在后面，但不进行排序</span></span><br><span class="line">np.argpartition(l,<span class="number">3</span>)<span class="comment">#把小于3 的放在前面，大于3的放在后面，但不进行排序,返回的是索引</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>索引</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br><span class="line">a[<span class="number">1</span>], a[<span class="number">2</span>:<span class="number">4</span>], a[-<span class="number">2</span>:], a[::<span class="number">2</span>], a[[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line"><span class="comment">#结果：(2, array([3, 4]), array([4, 5]), array([1, 3, 5]), array([2, 4, 5]))</span></span><br><span class="line"></span><br><span class="line">np.where()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fancy indexing</span></span><br><span class="line">np.<span class="built_in">sum</span>(x &lt;= <span class="number">3</span>) <span class="comment">#小于等于3 的个数</span></span><br><span class="line">np.<span class="built_in">sum</span>(X % <span class="number">2</span> == <span class="number">0</span>, axis=<span class="number">0</span>) <span class="comment">#能整除2 的每列的个数</span></span><br><span class="line">np.<span class="built_in">sum</span>(X % <span class="number">2</span> == <span class="number">0</span>, axis=<span class="number">1</span>) <span class="comment">#能整除2 的每行的个数</span></span><br><span class="line">np.<span class="built_in">any</span>(x == <span class="number">0</span>) <span class="comment">#是否存在x=0</span></span><br><span class="line">np.<span class="built_in">all</span>(x &gt;= <span class="number">0</span>) <span class="comment">#是否每个值都大于等于0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>一维和二维的数据转换</strong></p>
+<p><img src="https://miro.medium.com/max/788/1*d9j1sDyzpBXLxK11vU-Mtw.png"></p>
+<p><strong>三维数据</strong></p>
+<p>(z,y,x). The first index is the number of the plane, then the coordinates go in that plane</p>
+<p>在图片中的数据就是(y,x,z),plane是在最后一个值上面显示，以下是通常3D数组和图片的数组不一样的地方：</p>
+<p><img src="https://miro.medium.com/max/788/1*NNm3gGO8sEinq6JYlI84dg.png"></p>
+<p><strong>einsum函数非常重要！！</strong></p>
+<p><img src="https://miro.medium.com/max/788/1*uGKflexdelNxiireoI8YJw.png"></p>
+<p>简单介绍einsum函数： <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/m4H6vLLaFFoD9hkMULzvQA">https://mp.weixin.qq.com/s/m4H6vLLaFFoD9hkMULzvQA</a></p>
+<p><em>(update loading……)</em></p>
 
                 
             </div>
@@ -525,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">ERVIN ONG</a>
+                    <a href="/about" rel="external nofollow noreferrer">Wang xu</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -535,7 +575,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shithon.github.io/2022/03/25/%E6%9D%82%E6%84%9F-3%E6%9C%88%E4%BB%BD/">https://shithon.github.io/2022/03/25/%E6%9D%82%E6%84%9F-3%E6%9C%88%E4%BB%BD/</a>
+                    <a href="https://shithon.github.io/2022/03/25/Numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://shithon.github.io/2022/03/25/Numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,7 +588,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">ERVIN ONG</a>
+                    <a href="/about" target="_blank">Wang xu</a>
                     !
                 </span>
             </div>
@@ -573,8 +613,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%BF%83%E6%83%85/">
-                                    <span class="chip bg-color">心情</span>
+                                <a href="/tags/tech/">
+                                    <span class="chip bg-color">tech</span>
                                 </a>
                             
                         </div>
@@ -746,9 +786,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/25/Numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
@@ -766,9 +807,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -781,6 +822,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -799,33 +841,29 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/16/%E8%88%B9%E8%88%B6%E4%B9%B0%E5%8D%96%E6%B5%81%E7%A8%8B%EF%BC%88%E4%B9%B0%E6%96%B9%E8%A7%86%E8%A7%92%EF%BC%89/">
+                <a href="/2022/03/25/%E6%9D%82%E6%84%9F-3%E6%9C%88%E4%BB%BD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="船舶买卖流程-买方视角">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="最近心得">
                         
-                        <span class="card-title">船舶买卖流程-买方视角</span>
+                        <span class="card-title">最近心得</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            船舶买卖总结
+                            一蓑烟雨任平生
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%88%AA%E8%BF%90/" class="post-category">
-                                    航运
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERVIN ONG
                             
                         </span>
                     </div>
@@ -833,8 +871,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%88%AA%E8%BF%90%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">航运知识</span>
+                    <a href="/tags/%E5%BF%83%E6%83%85/">
+                        <span class="chip bg-color">心情</span>
                     </a>
                     
                 </div>
